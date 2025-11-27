@@ -100,45 +100,61 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`bg-black text-white py-12 ${footerClassName}`}>
+    <div className={`bg-foreground text-background py-16 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <BrandLogoLeft />
-            <p className="mt-4 text-white/70">
-              Your trusted online store
+          <div className="md:col-span-2">
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold text-background">Oaxacan Alebrijes</h3>
+            </div>
+            <p className="text-background/70 leading-relaxed mb-6">
+              Authentic handcrafted alebrijes from master artisans in Oaxaca, Mexico. 
+              Each purchase supports traditional craftsmanship and sustainable practices.
             </p>
+            <SocialLinks />
           </div>
 
-          {/* Links */}
+          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Links</h3>
+            <h3 className="font-semibold mb-4 text-background">Shop</h3>
             <div className="space-y-2">
               <Link 
                 to="/" 
-                className="block text-white/70 hover:text-white transition-colors"
+                className="block text-background/70 hover:text-background transition-colors"
               >
-                Home
+                All Alebrijes
               </Link>
               <Link 
                 to="/blog" 
-                className="block text-white/70 hover:text-white transition-colors"
+                className="block text-background/70 hover:text-background transition-colors"
               >
-                Blog
+                Our Story
               </Link>
             </div>
           </div>
 
-          {/* Social Links */}
+          {/* About */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Follow Us</h3>
-            <SocialLinks />
+            <h3 className="font-semibold mb-4 text-background">About</h3>
+            <div className="space-y-2">
+              <a href="#" className="block text-background/70 hover:text-background transition-colors">
+                Artisan Partners
+              </a>
+              <a href="#" className="block text-background/70 hover:text-background transition-colors">
+                Fair Trade
+              </a>
+              <a href="#" className="block text-background/70 hover:text-background transition-colors">
+                Sustainability
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/70">
-          <p>&copy; 2024 Your Store. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-background/20 text-center">
+          <p className="text-background/60">
+            &copy; {new Date().getFullYear()} Oaxacan Alebrijes. Handcrafted with ❤️ in Mexico.
+          </p>
         </div>
       </div>
     </div>
