@@ -144,6 +144,12 @@ export const IndexUI = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <div>
+              {/* Product Counter */}
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                <span className="text-primary font-bold text-lg">{filteredProducts.length}</span>
+                <span className="text-primary/80 font-medium">Unique Pieces</span>
+              </div>
+              
               <h2 className="text-4xl font-bold mb-2">
                 {selectedCollectionId ? `${collections.find(c => c.id === selectedCollectionId)?.name || 'Collection'}` : 'Featured Alebrijes'}
               </h2>
@@ -155,7 +161,6 @@ export const IndexUI = ({
                 View All
               </Button>}
           </div>
-          
           {loading ? <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {[...Array(8)].map((_, i) => <div key={i} className="bg-card rounded-xl h-96 animate-pulse"></div>)}
             </div> : filteredProducts.length > 0 ? <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
