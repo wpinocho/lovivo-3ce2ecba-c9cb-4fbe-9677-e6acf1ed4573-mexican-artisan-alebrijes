@@ -146,7 +146,9 @@ export const IndexUI = ({
             <div>
               {/* Product Counter */}
               <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                <span className="text-primary font-bold text-lg">{filteredProducts.length}</span>
+                <span className="text-primary font-bold text-lg" style={{
+                letterSpacing: "0px"
+              }}>9</span>
                 <span className="text-primary/80 font-medium">Unique Pieces</span>
               </div>
               
