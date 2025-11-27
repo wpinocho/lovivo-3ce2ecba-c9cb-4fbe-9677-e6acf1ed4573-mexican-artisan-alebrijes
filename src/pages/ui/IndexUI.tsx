@@ -201,8 +201,17 @@ export const IndexUI = ({
               </div>
             </div>
             
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl"></div>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover aspect-square"
+                poster="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/3ce2ecba-c9cb-4fbe-9677-e6acf1ed4573/heritage-crafting-poster.jpg"
+              >
+                <source src="/videos/heritage-crafting.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
