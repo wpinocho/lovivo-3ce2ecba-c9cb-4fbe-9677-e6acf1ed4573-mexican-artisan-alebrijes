@@ -16,6 +16,8 @@ import { Input } from '@/components/ui/input'
  * 
  * Template específico para páginas de ecommerce con header, footer y cart.
  * El agente IA puede modificar completamente el diseño, colores, layout.
+ * 
+ * Small random change for testing purposes
  */
 
 interface EcommerceTemplateProps {
