@@ -1,11 +1,11 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip"
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { trackPageView } from "@/lib/tracking-utils";
-import { CartProvider } from "@/contexts/CartCntext";
+import { CartProvider } from "@/contexts/CartContext";
 import { CartUIProvider } from "@/components/CartProvider";
 import { SettingsProvider } from "@/contexts/SettingsContext";
 import { PixelProvider } from "@/contexts/PixelContext";
