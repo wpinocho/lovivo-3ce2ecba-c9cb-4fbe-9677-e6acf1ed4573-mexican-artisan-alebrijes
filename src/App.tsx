@@ -49,7 +49,6 @@ const App = () => (
                 <BrowserRouter>
                   <FaviconManager />
                   <CartUIProvider>
-                    <NonExistentComponent />
                     <PageViewTracker />
                     <Routes>
                       <Route path="/" element={<Index />} />
