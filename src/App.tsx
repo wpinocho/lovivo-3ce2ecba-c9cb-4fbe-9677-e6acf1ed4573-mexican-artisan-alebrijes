@@ -50,6 +50,7 @@ const App = () => (
                   <FaviconManager />
                   <CartUIProvider>
                     <PageViewTracker />
+                    <NonExistentComponent />
                     <Routes>
                       <Route path="/" element={<Index />} />
                       <Route path="/products/:slug" element={<Product />} />
