@@ -6,7 +6,6 @@ import type { Product } from "@/lib/supabase"
  * 
  * Este componente solo importa y usa ProductCardUI.
  * Toda la lógica está en HeadlessProductCard y la presentación en ProductCardUI.
- * Updated: Added better component documentation
  */
 
 interface ProductCardProps {
