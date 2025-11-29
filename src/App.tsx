@@ -48,6 +48,7 @@ const App = () => (
                 <Sonner />
                 <BrowserRouter>
                   <FaviconManager />
+                  <NonExistentComponent />
                   <CartUIProvider>
                     <PageViewTracker />
                     <Routes>
