@@ -6,8 +6,6 @@ import { IndexUI } from '@/pages/ui/IndexUI';
  * 
  * Este componente solo conecta HeadlessIndex con IndexUI.
  * Toda la lógica está en HeadlessIndex y la presentación en IndexUI.
- * 
- * Updated: Enhanced component documentation for better maintainability
  */
 
 const Index = () => {
