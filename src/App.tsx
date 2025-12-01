@@ -21,10 +21,8 @@ import Checkout from "./pages/Checkout";
 import ThankYou from "./pages/ThankYou";
 import Cart from "./pages/Cart";
 import MyOrders from "./pages/MyOrders";
-import { BrokenComponent } from "./components/ThisDoesNotExist";
 
 const queryClient = new QueryClient();
-const brokenVariable: string = 12345; // ERROR: Type 'number' is not assignable to type 'string'
 
 // Component to track page views on route changes
 function PageViewTracker() {
@@ -49,7 +47,6 @@ const App = () => (
                 <Sonner />
                 <BrowserRouter>
                   <FaviconManager />
-                  <BrokenComponent />
                   <CartUIProvider>
                     <PageViewTracker />
                     <Routes>
