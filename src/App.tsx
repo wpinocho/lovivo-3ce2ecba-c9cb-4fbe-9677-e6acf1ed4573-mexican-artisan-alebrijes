@@ -36,6 +36,9 @@ function PageViewTracker() {
 }
 
 const App = () => {
+  // ERROR INTENCIONAL: Variable no definida
+  const brokenVariable = undefinedFunction();
+  
   return (
     <QueryClientProvider client={queryClient}>
       <SettingsProvider>
