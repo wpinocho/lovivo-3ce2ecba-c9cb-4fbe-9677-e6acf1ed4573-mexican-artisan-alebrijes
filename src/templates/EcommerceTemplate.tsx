@@ -16,8 +16,6 @@ import { Input } from '@/components/ui/input'
  * 
  * Template específico para páginas de ecommerce con header, footer y cart.
  * El agente IA puede modificar completamente el diseño, colores, layout.
- * 
- * Small random change for testing purposes
  */
 
 interface EcommerceTemplateProps {
@@ -102,15 +100,15 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`bg-card text-foreground py-16 border-t border-border ${footerClassName}`}>
+    <div className={`bg-foreground text-background py-16 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <h3 className="text-2xl font-bold text-foreground">Oaxacan Alebrijes</h3>
+              <h3 className="text-2xl font-bold text-background">Oaxacan Alebrijes</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-background/70 leading-relaxed mb-6">
               Authentic handcrafted alebrijes from master artisans in Oaxaca, Mexico. 
               Each purchase supports traditional craftsmanship and sustainable practices.
             </p>
@@ -119,17 +117,17 @@ export const EcommerceTemplate = ({
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Shop</h3>
+            <h3 className="font-semibold mb-4 text-background">Shop</h3>
             <div className="space-y-2">
               <Link 
                 to="/" 
-                className="block text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-background/70 hover:text-background transition-colors"
               >
                 All Alebrijes
               </Link>
               <Link 
                 to="/blog" 
-                className="block text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-background/70 hover:text-background transition-colors"
               >
                 Our Story
               </Link>
@@ -138,23 +136,23 @@ export const EcommerceTemplate = ({
 
           {/* About */}
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">About</h3>
+            <h3 className="font-semibold mb-4 text-background">About</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#" className="block text-background/70 hover:text-background transition-colors">
                 Artisan Partners
               </a>
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#" className="block text-background/70 hover:text-background transition-colors">
                 Fair Trade
               </a>
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#" className="block text-background/70 hover:text-background transition-colors">
                 Sustainability
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-background/20 text-center">
+          <p className="text-background/60">
             &copy; {new Date().getFullYear()} Oaxacan Alebrijes. Handcrafted with ❤️ in Mexico.
           </p>
         </div>
