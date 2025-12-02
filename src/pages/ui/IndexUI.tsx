@@ -29,95 +29,99 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
   return (
     <EcommerceTemplate showCart={true}>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="hero-gradient">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="inline-block">
-                  <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Authentic Mexican Artisanship
-                  </span>
-                </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Handcrafted
-                  <br />
-                  <span className="text-accent">Oaxacan</span>
-                  <br />
-                  Alebrijes
-                </h1>
-                <p className="text-xl text-white/90 leading-relaxed max-w-lg">
-                  Each piece is a unique masterwork, hand-carved and painted by skilled artisans from Oaxaca. 
-                  Own a piece of Mexican heritage while supporting traditional craftsmanship.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <Button 
-                    size="lg" 
-                    className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
-                    onClick={() => {
-                      document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    Shop Collection
-                  </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8"
-                  >
-                    Our Story
-                  </Button>
-                </div>
-              </div>
-              
-              <div className="relative hidden md:block">
-                <div className="relative animate-float">
-                  <img 
-                    src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/3ce2ecba-c9cb-4fbe-9677-e6acf1ed4573/hero-artisan.jpg"
-                    alt="Artisan painting alebrije"
-                    className="rounded-2xl shadow-2xl"
-                  />
-                  <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
-                    <p className="text-3xl font-bold text-primary">100%</p>
-                    <p className="text-sm text-muted-foreground">Handcrafted</p>
-                  </div>
-                </div>
-              </div>
+      {/* Hero Section with Video */}
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/3ce2ecba-c9cb-4fbe-9677-e6acf1ed4573/artisan-painting-poster.jpg"
+        >
+          <source src="/videos/artisan-painting.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Dark Elegant Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-purple-950/70"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="max-w-2xl">
+            <div className="inline-block mb-6">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                Authentic Mexican Artisanship
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+              Handcrafted
+              <br />
+              <span className="text-accent">Oaxacan</span>
+              <br />
+              Alebrijes
+            </h1>
+            <p className="text-xl text-white/90 leading-relaxed max-w-lg mb-8">
+              Each piece is a unique masterwork, hand-carved and painted by skilled artisans from Oaxaca. 
+              Own a piece of Mexican heritage while supporting traditional craftsmanship.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8"
+                onClick={() => {
+                  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Shop Collection
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold px-8 backdrop-blur-sm"
+              >
+                Our Story
+              </Button>
+            </div>
+            
+            {/* Handcrafted Badge */}
+            <div className="mt-12 inline-block bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+              <p className="text-4xl font-bold text-white">100%</p>
+              <p className="text-sm text-white/80">Handcrafted</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Impact Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-card/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20">
                 <Heart className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold">Fair Trade Certified</h3>
+              <h3 className="text-xl font-bold text-foreground">Fair Trade Certified</h3>
               <p className="text-muted-foreground">
                 Artisans receive fair compensation for their exceptional craftsmanship
               </p>
             </div>
             
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/20">
                 <Leaf className="h-8 w-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold">Sustainable Materials</h3>
+              <h3 className="text-xl font-bold text-foreground">Sustainable Materials</h3>
               <p className="text-muted-foreground">
                 Crafted from sustainably harvested copal wood and natural pigments
               </p>
             </div>
             
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10">
-                <Users className="h-8 w-8 craft-accent" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20">
+                <Users className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-xl font-bold">Community Impact</h3>
+              <h3 className="text-xl font-bold text-foreground">Community Impact</h3>
               <p className="text-muted-foreground">
                 Supporting artisan families and preserving generations of tradition
               </p>
@@ -153,7 +157,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       )}
 
       {/* Products Section */}
-      <section id="products" className="py-16 bg-muted/20">
+      <section id="products" className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <div>
@@ -200,7 +204,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       </section>
 
       {/* Heritage Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
@@ -246,7 +250,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-xl text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+              className="flex-1 px-6 py-4 rounded-xl bg-white/95 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-accent"
               required
             />
             <Button 
