@@ -14,6 +14,6 @@ const Index = () => {
       {(logic) => <IndexUI logic={logic} />}
     </HeadlessIndex>
   );
-}; {{{
+};
 
 export default Index;
